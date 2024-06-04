@@ -9,7 +9,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />, // Corrected prop name
-  },
+  }
   {
     path: "/profile",
     element: <Profile />, // Corrected prop name
