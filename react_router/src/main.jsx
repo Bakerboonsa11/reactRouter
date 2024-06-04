@@ -12,7 +12,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    element: <Profile />, // Corrected prop name
+    element: <Profil />, // Corrected prop name
   },
 ]);
 
