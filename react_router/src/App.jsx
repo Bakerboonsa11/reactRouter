@@ -1,16 +1,23 @@
-import { useState } from "react";
-
-import "./App.css";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
-      <h1>Hello from the main page of the app!</h1>
-      <p>Here are some examples of links to other pages</p>
+      <h1>Welcome to the App</h1>
       <nav>
-        <ul className="navigation">
+        <ul>
           <li>
-            <a href="profile">Profile page</a>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/profile">Profile</Link>
+          </li>
+          <li>
+            <Link to="/profile/spinach">Spinach</Link>
+          </li>
+          <li>
+            <Link to="/profile/popeye">Popeye</Link>
           </li>
         </ul>
       </nav>
