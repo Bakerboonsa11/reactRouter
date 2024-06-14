@@ -1,36 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import DefaultProfile from "./DefaultProfile.jsx";
-import Profile from "./profile";
-import Spinach from "./Spinach";
-import Popeye from "./Popeye";
-
-// Profile component should render Outlet for nested routes
-const ProfileLayout = () => (
-  <div>
-    <Profile />
-    <Outlet />
-  </div>
-);
-
+import { createBrowserRouter,RouterProvider} from 'react-router-dom';
+import "./index.css"
+import Root from "./routes/root"
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/profile",
-    element: <ProfileLayout />,
-    children: [
-      { index: true, element: <DefaultProfile /> },
-      { path: "spinach", element: <Spinach /> },
-      { path: "popeye", element: <Popeye /> },
-    ],
-  },
-]);
+
+  path:"/",
+  element:<Root/>
+  }
+])
+
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
